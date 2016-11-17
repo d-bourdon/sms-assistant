@@ -2,7 +2,7 @@
 str=$SMS_1_TEXT
 tlf=$SMS_1_NUMBER
 tlft=${tlf:0:3}			#on recupere le code pays
-if $tlft = "+33"; then		#on verifie aue c'est un numero francais
+if test $tlft = "+33"; then	#on verifie que c'est un numero francais
 	tlf=${tlf:3} 		#retrait du code pays (+33)
 else
 	exit

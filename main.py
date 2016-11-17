@@ -2,7 +2,6 @@
 import os, sys, subprocess
 from subprocess import Popen, PIPE, call
 from config import config
-#from subprocess import call
 
 
 # check des erreurs fatal
@@ -27,7 +26,6 @@ else:
 if cmd != "none":
 	proc = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 	message = proc.stdout.read()
-	#message = Popen(cmd, shell=True, bufsize=20, stdout=PIPE).stdout
 
 if message != '' and message != "error":
 	call(["gammu-smsd-inject", "TEXT", tel, "-text", message]);
